@@ -1,0 +1,3 @@
+type LoginValues ={
+    email:string
+}
