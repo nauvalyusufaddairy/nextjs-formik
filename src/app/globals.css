@@ -213,3 +213,8 @@ body{
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+
+.transition-base{
+  transform: rotateY(360deg);
+  transition: transform ease 500ms;
+}

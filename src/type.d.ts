@@ -1,3 +1,4 @@
-type LoginValues ={
-    email:string
-}
+type LoginValues = {
+  email: string;
+  password: string;
+};
