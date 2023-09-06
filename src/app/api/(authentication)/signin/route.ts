@@ -49,8 +49,8 @@ export async function POST(req: Request, res: NextResponse) {
       {
         name: email,
         accessToken: response.AuthenticationResult?.AccessToken,
-        // refreshToken: response.AuthenticationResult?.RefreshToken,
-        // idToken: response.AuthenticationResult?.IdToken,
+        refreshToken: response.AuthenticationResult?.RefreshToken,
+        idToken: response.AuthenticationResult?.IdToken,
       },
       { status: 200 }
     );

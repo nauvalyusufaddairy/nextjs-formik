@@ -6,12 +6,18 @@ import {
 
 export async function POST(req: NextRequest, res: NextResponse) {
   const { REGION, COGNITO_CLIENT_ID } = process.env;
-  const { password, email } = await req.json();
+  const { password, email, username } = await req.json();
 
   const client = new CognitoIdentityProviderClient({ region: REGION });
 
   const signupCommand = new SignUpCommand({
     ClientId: COGNITO_CLIENT_ID!,
+    UserAttributes: [
+      {
+        Name: "custom:username",
+        Value: username,
+      },
+    ],
     Password: password,
     Username: email,
   });

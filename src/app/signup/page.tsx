@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
@@ -27,7 +28,9 @@ export default function Signin() {
               {" "}
               <GrMail />
             </div>
-            <div> Sign up with Email</div>
+            <Link href={"/signup/email"}>
+              <div> Sign up with Email</div>
+            </Link>
           </div>
         </div>
         <div className="mt-6">
